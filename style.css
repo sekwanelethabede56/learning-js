@@ -1,37 +1,70 @@
-table{
-    color: #fff;
+body {
+    background: linear-gradient(to bottom right, #ffe6f0, #ffccdd);
+    font-family: 'Comic Sans MS',cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #fff0f5;
+    border: 5px solid  #ff69b4;
+    border-radius: 20px;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.2);
+    padding:20px;
+    width: 320px;
     text-align: center;
-    border-collapse: collapse;
-    font: normal 3em Arial, Helvetica, sans-serif;
+    position: relative;
+    animation: pop-in 1s ease;
 }
 
-tr{
-    height:16.02vh;
-    background-color: #4e494d;
+@keyframes pop-in {
+    0%{transform:scale(0.8);opacity: 0;}
+    100%{transform:scale(1);opacity:1;}
 }
 
-td{
-    width:25vw;
-    border:1px solid #4e494d;
+calculator img {
+    width:100px;
+    margin-bottom:10px;
+    animation:float 3s ease-in-out infinite;
 }
 
-#inputBox{
-    background-color: #4e494d;
+@keyframes float {
+    0%,100% { transform: translateY(0);}
+    50%{ transform:translateY(-10px);}
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    border-radius:10px;
+    border: 2px solid #ff69b4;
+    margin-bottom: 15px;
     text-align: right;
-    width:100%;
-    font-size:2em;
-    color: #fff;
-    border:0px;
+    background-color: #fff5fa
 }
 
-.digitButton{
-    background-color: #807e80;
+.buttons button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    margin:5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffc0cb;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 4px #ff69b4;
+    transition: background-color 0.3s ease , transform 0.2s;   
 }
 
-.operatorButton{
-    background-color: #ff9e80
+.buttons button:hover{
+    background-color: #ff69b4;
 }
 
-.ACButton{
-    background-color: #656165;
+.buttons button: active {
+transform:scale(0.95);
 }
