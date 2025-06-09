@@ -5,7 +5,7 @@ function append(character) {
 function calculate() {
     try {
         document.getElementById('display').value =eval(document.getElementById('display').value);
-    }  catch (e) {
+    }  catch  {
         document.getElementById('display').value = 'Error';
     }
 }
